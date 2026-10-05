@@ -1,0 +1,41 @@
+{% extends 'shop/base.html' %}
+
+{% block title %}О нас{% endblock %}
+
+{% block content %}
+<section class="container section about">
+    <h1>О нас</h1>
+    <p class="about__lead">«Уютный дом» — интернет-магазин товаров для дома. Мы сами выбираем каждую вещь
+        в каталоге: проверяем качество, пользуемся ею дома и только потом предлагаем покупателям.</p>
+
+    <div class="about__grid">
+        <div class="about__block">
+            <h3>Наша история</h3>
+            <p>Магазин появился в 2020 году как небольшая лавка текстиля. Сегодня в каталоге посуда, декор,
+                освещение и товары для хранения, а заказы приходят со всей России.</p>
+        </div>
+        <div class="about__block">
+            <h3>Наши принципы</h3>
+            <ul>
+                <li>натуральные материалы там, где это возможно;</li>
+                <li>честные описания и фотографии товаров;</li>
+                <li>возврат в течение 30 дней без лишних вопросов.</li>
+            </ul>
+        </div>
+        <div class="about__block">
+            <h3>В цифрах</h3>
+            <div class="numbers">
+                <div><b>6</b><span>лет работы</span></div>
+                <div><b>12 000+</b><span>покупателей</span></div>
+                <div><b>80</b><span>городов доставки</span></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="about__contacts">
+        <h3>Как с нами связаться</h3>
+        <p>Телефон: +7 (800) 555-00-00 · Email: hello@uyutny-dom.ru · Шоурум: Москва, ул. Садовая, 15</p>
+        <a class="btn" href="{% url 'shop:catalog' %}">Посмотреть товары</a>
+    </div>
+</section>
+{% endblock %}
