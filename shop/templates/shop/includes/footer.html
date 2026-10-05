@@ -1,0 +1,20 @@
+{# Подвал сайта: описание магазина, ссылки на страницы и контакты #}
+<footer class="footer">
+    <div class="container footer__inner">
+        <div>
+            <div class="footer__title">🏠 Уютный дом</div>
+            <p>Интернет-магазин товаров для дома.<br>Доставка по всей России.</p>
+        </div>
+        <div>
+            <div class="footer__title">Страницы</div>
+            <a href="{% url 'shop:index' %}">Главная</a>
+            <a href="{% url 'shop:catalog' %}">Каталог</a>
+            <a href="{% url 'shop:about' %}">О нас</a>
+        </div>
+        <div>
+            <div class="footer__title">Контакты</div>
+            <p>+7 (800) 555-00-00<br>hello@uyutny-dom.ru<br>Ежедневно с 9:00 до 21:00</p>
+        </div>
+    </div>
+    <div class="container footer__copy">© 2026 «Уютный дом». Все права защищены.</div>
+</footer>

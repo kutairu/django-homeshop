@@ -1,0 +1,19 @@
+{# Шапка сайта: логотип, навигация по страницам и счётчик корзины #}
+{% with page=request.resolver_match.url_name %}
+<header class="header">
+    <div class="container header__inner">
+        <a class="logo" href="{% url 'shop:index' %}">
+            <span class="logo__icon">🏠</span>
+            <span class="logo__text">Уютный дом</span>
+        </a>
+        <nav class="nav">
+            <a class="nav__btn {% if page == 'index' %}nav__btn--active{% endif %}" href="{% url 'shop:index' %}">Главная</a>
+            <a class="nav__btn {% if page == 'catalog' %}nav__btn--active{% endif %}" href="{% url 'shop:catalog' %}">Каталог</a>
+            <a class="nav__btn {% if page == 'about' %}nav__btn--active{% endif %}" href="{% url 'shop:about' %}">О нас</a>
+        </nav>
+        <div class="cart" title="Товаров в корзине">
+            🛒 <span class="cart__count" id="cart-count">0</span>
+        </div>
+    </div>
+</header>
+{% endwith %}

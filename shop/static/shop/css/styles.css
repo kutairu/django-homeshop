@@ -355,6 +355,89 @@ h1, h2, h3 {
     color: #b8a99d;
 }
 
+/* корзина в шапке */
+.cart {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--soft);
+    border-radius: 999px;
+    padding: 6px 14px;
+    font-size: 18px;
+}
+
+.cart__count {
+    min-width: 24px;
+    height: 24px;
+    border-radius: 999px;
+    background: var(--accent);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    display: grid;
+    place-items: center;
+    padding: 0 6px;
+}
+
+/* кнопка после добавления товара */
+.btn--done {
+    background: #5a8f5c;
+}
+
+.btn--done:hover {
+    background: #4c7b4e;
+}
+
+/* всплывающее сообщение */
+.toast {
+    position: fixed;
+    left: 50%;
+    bottom: 24px;
+    transform: translate(-50%, 20px);
+    background: var(--text);
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .2);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .2s, transform .2s;
+    z-index: 20;
+}
+
+.toast--visible {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+/* кнопка «Наверх» */
+.to-top {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    width: 46px;
+    height: 46px;
+    border: 0;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, .2);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .2s, background .15s;
+}
+
+.to-top--visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.to-top:hover {
+    background: var(--accent-dark);
+}
+
 /* телефоны */
 @media (max-width: 760px) {
     .header__inner {

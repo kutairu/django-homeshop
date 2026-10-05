@@ -10,8 +10,11 @@ homeshop/          — настройки проекта и главный urls.
 shop/              — приложение магазина
 ├── urls.py        — маршруты: /, /catalog/, /about/
 ├── views.py       — отображения страниц и список товаров
-├── templates/shop — base.html (header, footer) и шаблоны страниц
-└── static/shop    — стили
+├── templates/shop — base.html и шаблоны страниц
+│   └── includes   — header.html и footer.html, подключаются в base.html
+└── static/shop
+    ├── css/styles.css — все стили сайта
+    └── js/script.js   — корзина, всплывающие сообщения, кнопка «Наверх»
 ```
 
 ## Запуск
